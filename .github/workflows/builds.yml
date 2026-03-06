@@ -62,13 +62,13 @@ jobs:
     steps:
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_oss_images}}
           tags: ${{env.docker_oss_tags}}
       - name: Docker arm64 meta
         id: arm64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_oss_images}}
           tags: ${{env.docker_oss_tags}}
@@ -76,7 +76,7 @@ jobs:
             suffix=-${{env.arch_arm64}},onlatest=true
       - name: Docker amd64 meta
         id: amd64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_oss_images}}
           tags: ${{env.docker_oss_tags}}
@@ -161,13 +161,13 @@ jobs:
     steps:
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_ent_images}}
           tags: ${{env.docker_ent_tags}}
       - name: Docker arm64 meta
         id: arm64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_ent_images}}
           tags: ${{env.docker_ent_tags}}
@@ -175,7 +175,7 @@ jobs:
             suffix=-${{env.arch_arm64}},onlatest=true
       - name: Docker amd64 meta
         id: amd64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_ent_images}}
           tags: ${{env.docker_ent_tags}}
@@ -262,13 +262,13 @@ jobs:
     steps:
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_sbsvc_images}}
           tags: ${{env.docker_sbsvc_tags}}
       - name: Docker arm64 meta
         id: arm64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_sbsvc_images}}
           tags: ${{env.docker_sbsvc_tags}}
@@ -276,7 +276,7 @@ jobs:
             suffix=-${{env.arch_arm64}},onlatest=true
       - name: Docker amd64 meta
         id: amd64_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{env.docker_sbsvc_images}}
           tags: ${{env.docker_sbsvc_tags}}
